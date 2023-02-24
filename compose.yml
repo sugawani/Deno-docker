@@ -1,0 +1,11 @@
+services:
+  deno:
+    container_name: deno-web
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app
+    ports:
+      - 8080:8080
